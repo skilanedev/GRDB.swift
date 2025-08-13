@@ -42,18 +42,18 @@ let package = Package(
         .watchOS(.v7),
     ],
     products: [
-        .library(name: "GRDBSQLite", targets: ["GRDBSQLite"]),
+        .library(name: "CSQLite", targets: ["CSQLite"]),
         .library(name: "GRDB", targets: ["GRDB"]),
         .library(name: "GRDB-dynamic", type: .dynamic, targets: ["GRDB"]),
     ],
     dependencies: dependencies,
     targets: [
         .systemLibrary(
-            name: "GRDBSQLite",
++           name: "CSQLite",
             providers: [.apt(["libsqlite3-dev"])]),
         .target(
             name: "GRDB",
-            dependencies: ["GRDBSQLite"],
+            dependencies: ["CSQLite"],
             path: "GRDB",
             resources: [.copy("PrivacyInfo.xcprivacy")],
             cSettings: cSettings,
