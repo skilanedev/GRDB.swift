@@ -6,8 +6,13 @@ import PackageDescription
 
 var swiftSettings: [SwiftSetting] = [
     .define("SQLITE_ENABLE_FTS5"),
+    .define("SQLITE_ENABLE_LOAD_EXTENSION"),  // Optional, but harmless for Swift conditional compilation
 ]
-var cSettings: [CSetting] = []
+var cSettings: [CSetting] = [
+    .define("SQLITE_ENABLE_LOAD_EXTENSION"),  // Required for loading sqlite-vec extension
+    .define("SQLITE_ENABLE_FTS5")  // Added for consistency in C layer, supporting SAD's hybrid keyword search
+]
+
 var dependencies: [PackageDescription.Package.Dependency] = []
 
 // Don't rely on those environment variables. They are ONLY testing conveniences:
