@@ -48,9 +48,10 @@ let package = Package(
     ],
     dependencies: dependencies,
     targets: [
-        .systemLibrary(
+        .target(
             name: "CSQLite",
-            providers: [.apt(["libsqlite3-dev"])]),
+            cSettings: cSettings
+        ),  // Now a custom target compiling sqlite3.c with enables; no providers needed
         .target(
             name: "GRDB",
             dependencies: ["CSQLite"],
