@@ -17,7 +17,6 @@ var cSettings: [CSetting] = [
     .define("SQLITE_THREADSAFE", to: "1"), // Multi-thread mode (GRDB default)
     .define("SQLITE_TEMP_STORE", to: "2"), // Temp files in memory
     .define("SQLITE_DQS", to: "0"), // Disable double-quoted strings as identifiers
-    .define("SQLITE_OMIT_LOAD_EXTENSION", to: "0"), // Explicitly include load extension (default, but safe)
     .define("SQLITE_OMIT_SHARED_CACHE", to: "1"), // Disable shared cache for safety
     .define("SQLITE_OMIT_DEPRECATED", to: "1"), // Omit deprecated features
     .define("SQLITE_OMIT_PROGRESS_CALLBACK", to: "1"), // Omit progress callbacks
