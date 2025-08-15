@@ -28,7 +28,7 @@ var cSettings: [CSetting] = [
     .define("SQLITE_ENABLE_STAT4", to: "1"), // Enable advanced stats
     .define("SQLITE_MAX_EXPR_DEPTH", to: "0"), // No max expression depth
     .define("SQLITE_DEFAULT_MMAP_SIZE", to: "268435456"), // 256MB mmap
-    .define("NDEBUG", to: nil, .when(configuration: .release)), // No debug in release
+    .define("NDEBUG"), // No debug in all configurations
     .define("SQLITE_ENABLE_SNAPSHOT") // Enables WAL snapshot functions for GRDB's DatabaseSnapshotPool
 ]
 
