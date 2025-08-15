@@ -10,24 +10,27 @@ var swiftSettings: [SwiftSetting] = [
 ]
 
 var cSettings: [CSetting] = [
-    .define("SQLITE_ENABLE_LOAD_EXTENSION"),  // Enables dynamic extension loading
-    .define("SQLITE_ENABLE_FTS5"),  // For hybrid search
-    .define("SQLITE_THREADSAFE", to: "1"),  // Multi-thread mode (GRDB default)
-    .define("SQLITE_TEMP_STORE", to: "2"),  // Temp files in memory
-    .define("SQLITE_DQS", to: "0"),  // Disable double-quoted strings as identifiers
-    .define("SQLITE_OMIT_LOAD_EXTENSION", to: "0"),  // Explicitly include load extension (default, but safe)
-    .define("SQLITE_OMIT_SHARED_CACHE", to: "1"),  // Disable shared cache for safety
-    .define("SQLITE_OMIT_DEPRECATED", to: "1"),  // Omit deprecated features
-    .define("SQLITE_OMIT_PROGRESS_CALLBACK", to: "1"),  // Omit progress callbacks
-    .define("SQLITE_OMIT_DECLTYPE", to: "1"),  // Omit declared types
-    .define("SQLITE_OMIT_AUTOINIT", to: "1"),  // Omit auto-init
-    .define("SQLITE_USE_ALLOCA", to: "1"),  // Use alloca for memory
-    .define("SQLITE_ENABLE_RTREE", to: "1"),  // Enable R*Tree (optional, but useful)
-    .define("SQLITE_ENABLE_JSON1", to: "1"),  // Enable JSON functions (optional)
-    .define("SQLITE_ENABLE_STAT4", to: "1"),  // Enable advanced stats
-    .define("SQLITE_MAX_EXPR_DEPTH", to: "0"),  // No max expression depth
-    .define("SQLITE_DEFAULT_MMAP_SIZE", to: "268435456"),  // 256MB mmap
-    .define("NDEBUG", .when(configuration: .release))  // No debug in release
+    .define("NO_SYS_MINMAX"),  // Suppress system MIN/MAX in sys/param.h
+    .unsafeFlags(["-Wno-ambiguous-macro"]),  // Globally ignore ambiguous macro warnings
+    .define("SQLITE_ENABLE_LOAD_EXTENSION"), // Enables dynamic extension loading
+    .define("SQLITE_ENABLE_FTS5"), // For hybrid search
+    .define("SQLITE_THREADSAFE", to: "1"), // Multi-thread mode (GRDB default)
+    .define("SQLITE_TEMP_STORE", to: "2"), // Temp files in memory
+    .define("SQLITE_DQS", to: "0"), // Disable double-quoted strings as identifiers
+    .define("SQLITE_OMIT_LOAD_EXTENSION", to: "0"), // Explicitly include load extension (default, but safe)
+    .define("SQLITE_OMIT_SHARED_CACHE", to: "1"), // Disable shared cache for safety
+    .define("SQLITE_OMIT_DEPRECATED", to: "1"), // Omit deprecated features
+    .define("SQLITE_OMIT_PROGRESS_CALLBACK", to: "1"), // Omit progress callbacks
+    .define("SQLITE_OMIT_DECLTYPE", to: "1"), // Omit declared types
+    .define("SQLITE_OMIT_AUTOINIT", to: "1"), // Omit auto-init
+    .define("SQLITE_USE_ALLOCA", to: "1"), // Use alloca for memory
+    .define("SQLITE_ENABLE_RTREE", to: "1"), // Enable R*Tree (optional, but useful)
+    .define("SQLITE_ENABLE_JSON1", to: "1"), // Enable JSON functions (optional)
+    .define("SQLITE_ENABLE_STAT4", to: "1"), // Enable advanced stats
+    .define("SQLITE_MAX_EXPR_DEPTH", to: "0"), // No max expression depth
+    .define("SQLITE_DEFAULT_MMAP_SIZE", to: "268435456"), // 256MB mmap
+    .define("NDEBUG", to: nil, .when(configuration: .release)), // No debug in release
+    .define("SQLITE_ENABLE_SNAPSHOT") // Enables WAL snapshot functions for GRDB's DatabaseSnapshotPool
 ]
 
 var dependencies: [PackageDescription.Package.Dependency] = []
@@ -67,8 +70,10 @@ let package = Package(
     targets: [
         .target(
             name: "CSQLite",
-            path: "Sources/CSQLite",  // Explicit path to sources
-        ),  // Now a custom target compiling sqlite3.c with enables; no providers needed
+            path: "Sources/CSQLite",
+            publicHeadersPath: "include",  // Exposes headers in include/ with defines applied
+            cSettings: cSettings
+        ),
         .target(
             name: "GRDB",
             dependencies: ["CSQLite"],

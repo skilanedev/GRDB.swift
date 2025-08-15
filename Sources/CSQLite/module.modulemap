@@ -1,4 +1,4 @@
 module CSQLite {
-  header "shim.h"
+  header "include/shim.h"
   export *
 }
