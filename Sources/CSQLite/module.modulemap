@@ -1,4 +1,6 @@
 module CSQLite {
   header "include/shim.h"
+  header "include/sqlite3.h"
+  header "include/wrapper.h"
   export *
 }

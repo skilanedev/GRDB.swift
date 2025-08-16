@@ -1,0 +1,1 @@
+int disable_sqlite_memstatus(void);
