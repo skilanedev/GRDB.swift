@@ -15,7 +15,7 @@ let package = Package(
         .target(
             name: "GRDB",
             dependencies: ["SQLiteVec"],
-            path: "Sources/GRDB"
+            path: "Sources/GRDBSQLite"
         ),
         .testTarget(
             name: "GRDBTests",
