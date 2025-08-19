@@ -16,6 +16,8 @@ extern void _enableDoubleQuotedStringLiterals(sqlite3 *db);
 extern void _disableDoubleQuotedStringLiterals(sqlite3 *db);
 
 extern void _enableDoubleQuotedStringLiterals(sqlite3 *db);
+
+extern int sqlite3_vec_init(sqlite3 *db, char **pzErrMsg, const sqlite3_api_routines *pApi);
 #endif
 
 // Expose APIs that are missing from system <sqlite3.h>
