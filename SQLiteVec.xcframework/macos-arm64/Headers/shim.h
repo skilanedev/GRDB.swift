@@ -6,6 +6,8 @@ extern "C" {
 
 typedef void(*_errorLogCallback)(void *pArg, int iErrCode, const char *zMsg);
 
+typedef struct sqlite3_api_routines sqlite3_api_routines;
+
 extern void _registerErrorLogCallback(_errorLogCallback callback);
 
 #if SQLITE_VERSION_NUMBER >= 3029000
@@ -16,15 +18,9 @@ extern void _enableDoubleQuotedStringLiterals(sqlite3 *db);
 extern void _disableDoubleQuotedStringLiterals(sqlite3 *db);
 
 extern void _enableDoubleQuotedStringLiterals(sqlite3 *db);
-
-extern int sqlite3_vec_init(sqlite3 *db, char **pzErrMsg, const sqlite3_api_routines *pApi);
-
-extern int sqlite3_vec_init(sqlite3 *db, char **pzErrMsg, const sqlite3_api_routines *pApi);
-
-extern int sqlite3_vec_init(sqlite3 *db, char **pzErrMsg, const void *pApi);
-
-extern void sqlite3_free(void *p);
 #endif
+
+extern int sqlite3_vec_init(sqlite3 *db, char **pzErrMsg, const sqlite3_api_routines *pApi);
 
 // Expose APIs that are missing from system <sqlite3.h>
 #ifdef GRDB_SQLITE_ENABLE_PREUPDATE_HOOK
@@ -46,6 +42,8 @@ SQLITE_API int sqlite3_preupdate_count(sqlite3 *);
 SQLITE_API int sqlite3_preupdate_depth(sqlite3 *);
 SQLITE_API int sqlite3_preupdate_new(sqlite3 *, int, sqlite3_value **);
 #endif /* GRDB_SQLITE_ENABLE_PREUPDATE_HOOK */
+
+extern void sqlite3_vec_auto_init(void);
 
 #ifdef __cplusplus
 }

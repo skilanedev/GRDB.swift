@@ -1,0 +1,414 @@
+[0/1] Planning build
+Building for debugging...
+[0/3] Copying libGRDBSQLite.a
+[1/3] Write swift-version--58304C5D6DBC2206.txt
+[3/154] Compiling GRDB CGFloat.swift
+[4/154] Compiling GRDB Data.swift
+[5/154] Compiling GRDB DatabaseDateComponents.swift
+[6/154] Compiling GRDB DatabaseValueConvertible+ReferenceConvertible.swift
+[7/154] Compiling GRDB Date.swift
+[8/154] Compiling GRDB Decimal.swift
+[9/154] Compiling GRDB NSData.swift
+[10/154] Compiling GRDB NSNull.swift
+[11/154] Compiling GRDB NSNumber.swift
+[12/154] Compiling GRDB NSString.swift
+[13/154] Compiling GRDB SQLiteDateParser.swift
+[14/154] Compiling GRDB URL.swift
+[15/154] Compiling GRDB UUID.swift
+[16/154] Compiling GRDB DatabaseValueConvertible+Decodable.swift
+[17/154] Compiling GRDB DatabaseValueConvertible+Encodable.swift
+[18/154] Compiling GRDB DatabaseValueConvertible+RawRepresentable.swift
+[19/154] Compiling GRDB JSONRequiredEncoder.swift
+[20/170] Emitting module GRDB
+[21/170] Compiling GRDB DatabaseSnapshotPool.swift
+[22/170] Compiling GRDB DatabaseValue.swift
+[23/170] Compiling GRDB DatabaseValueConvertible.swift
+[24/170] Compiling GRDB DatabaseWriter.swift
+[25/170] Compiling GRDB DispatchQueueActor.swift
+[26/170] Compiling GRDB FetchRequest.swift
+[27/170] Compiling GRDB Row.swift
+[28/170] Compiling GRDB RowAdapter.swift
+[29/170] Compiling GRDB RowDecodingError.swift
+[30/170] Compiling GRDB SQL.swift
+[31/170] Compiling GRDB SQLInterpolation.swift
+[32/170] Compiling GRDB SQLRequest.swift
+[33/170] Compiling GRDB SchedulingWatchdog.swift
+[34/170] Compiling GRDB SerializedDatabase.swift
+[35/170] Compiling GRDB Statement.swift
+[36/170] Compiling GRDB StatementAuthorizer.swift
+[37/170] Compiling GRDB StatementColumnConvertible.swift
+[38/170] Compiling GRDB FTS4.swift
+[39/170] Compiling GRDB FTS5.swift
+[40/170] Compiling GRDB FTS5CustomTokenizer.swift
+[41/170] Compiling GRDB FTS5Pattern.swift
+[42/170] Compiling GRDB FTS5Tokenizer.swift
+[43/170] Compiling GRDB FTS5TokenizerDescriptor.swift
+[44/170] Compiling GRDB FTS5WrapperTokenizer.swift
+[45/170] Compiling GRDB Fixits.swift
+[46/170] Compiling GRDB JSONColumn.swift
+[47/170] Compiling GRDB SQLJSONExpressible.swift
+[48/170] Compiling GRDB SQLJSONFunctions.swift
+[49/170] Compiling GRDB DatabaseMigrator.swift
+[50/170] Compiling GRDB Migration.swift
+[51/170] Compiling GRDB FTS3+QueryInterface.swift
+[52/170] Compiling GRDB FTS5+QueryInterface.swift
+[53/170] Compiling GRDB ForeignKey.swift
+[54/170] Compiling GRDB Association.swift
+[55/170] Compiling GRDB ForeignKeyDefinition.swift
+/Users/skilane/ios-dev/projects/grdb-fork-test/GRDB.swift/GRDB/Record/EncodableRecord.swift:243:28: warning: type 'Any' does not conform to the 'Sendable' protocol
+241 |         // guarantee some stability in order to ease record comparison
+242 |         encoder.outputFormatting = .sortedKeys
+243 |         encoder.userInfo = databaseEncodingUserInfo
+    |                            `- warning: type 'Any' does not conform to the 'Sendable' protocol
+244 |         return encoder
+245 |     }
+
+/Users/skilane/ios-dev/projects/grdb-fork-test/GRDB.swift/GRDB/Record/FetchableRecord.swift:269:28: warning: type 'Any' does not conform to the 'Sendable' protocol
+ 267 |         decoder.dateDecodingStrategy = .millisecondsSince1970
+ 268 |         decoder.nonConformingFloatDecodingStrategy = .throw
+ 269 |         decoder.userInfo = databaseDecodingUserInfo
+     |                            `- warning: type 'Any' does not conform to the 'Sendable' protocol
+ 270 |         return decoder
+ 271 |     }
+[56/170] Compiling GRDB IndexDefinition.swift
+/Users/skilane/ios-dev/projects/grdb-fork-test/GRDB.swift/GRDB/Record/EncodableRecord.swift:243:28: warning: type 'Any' does not conform to the 'Sendable' protocol
+241 |         // guarantee some stability in order to ease record comparison
+242 |         encoder.outputFormatting = .sortedKeys
+243 |         encoder.userInfo = databaseEncodingUserInfo
+    |                            `- warning: type 'Any' does not conform to the 'Sendable' protocol
+244 |         return encoder
+245 |     }
+
+/Users/skilane/ios-dev/projects/grdb-fork-test/GRDB.swift/GRDB/Record/FetchableRecord.swift:269:28: warning: type 'Any' does not conform to the 'Sendable' protocol
+ 267 |         decoder.dateDecodingStrategy = .millisecondsSince1970
+ 268 |         decoder.nonConformingFloatDecodingStrategy = .throw
+ 269 |         decoder.userInfo = databaseDecodingUserInfo
+     |                            `- warning: type 'Any' does not conform to the 'Sendable' protocol
+ 270 |         return decoder
+ 271 |     }
+[57/170] Compiling GRDB TableAlteration.swift
+/Users/skilane/ios-dev/projects/grdb-fork-test/GRDB.swift/GRDB/Record/EncodableRecord.swift:243:28: warning: type 'Any' does not conform to the 'Sendable' protocol
+241 |         // guarantee some stability in order to ease record comparison
+242 |         encoder.outputFormatting = .sortedKeys
+243 |         encoder.userInfo = databaseEncodingUserInfo
+    |                            `- warning: type 'Any' does not conform to the 'Sendable' protocol
+244 |         return encoder
+245 |     }
+
+/Users/skilane/ios-dev/projects/grdb-fork-test/GRDB.swift/GRDB/Record/FetchableRecord.swift:269:28: warning: type 'Any' does not conform to the 'Sendable' protocol
+ 267 |         decoder.dateDecodingStrategy = .millisecondsSince1970
+ 268 |         decoder.nonConformingFloatDecodingStrategy = .throw
+ 269 |         decoder.userInfo = databaseDecodingUserInfo
+     |                            `- warning: type 'Any' does not conform to the 'Sendable' protocol
+ 270 |         return decoder
+ 271 |     }
+[58/170] Compiling GRDB TableDefinition.swift
+/Users/skilane/ios-dev/projects/grdb-fork-test/GRDB.swift/GRDB/Record/EncodableRecord.swift:243:28: warning: type 'Any' does not conform to the 'Sendable' protocol
+241 |         // guarantee some stability in order to ease record comparison
+242 |         encoder.outputFormatting = .sortedKeys
+243 |         encoder.userInfo = databaseEncodingUserInfo
+    |                            `- warning: type 'Any' does not conform to the 'Sendable' protocol
+244 |         return encoder
+245 |     }
+
+/Users/skilane/ios-dev/projects/grdb-fork-test/GRDB.swift/GRDB/Record/FetchableRecord.swift:269:28: warning: type 'Any' does not conform to the 'Sendable' protocol
+ 267 |         decoder.dateDecodingStrategy = .millisecondsSince1970
+ 268 |         decoder.nonConformingFloatDecodingStrategy = .throw
+ 269 |         decoder.userInfo = databaseDecodingUserInfo
+     |                            `- warning: type 'Any' does not conform to the 'Sendable' protocol
+ 270 |         return decoder
+ 271 |     }
+[59/170] Compiling GRDB VirtualTableModule.swift
+/Users/skilane/ios-dev/projects/grdb-fork-test/GRDB.swift/GRDB/Record/EncodableRecord.swift:243:28: warning: type 'Any' does not conform to the 'Sendable' protocol
+241 |         // guarantee some stability in order to ease record comparison
+242 |         encoder.outputFormatting = .sortedKeys
+243 |         encoder.userInfo = databaseEncodingUserInfo
+    |                            `- warning: type 'Any' does not conform to the 'Sendable' protocol
+244 |         return encoder
+245 |     }
+
+/Users/skilane/ios-dev/projects/grdb-fork-test/GRDB.swift/GRDB/Record/FetchableRecord.swift:269:28: warning: type 'Any' does not conform to the 'Sendable' protocol
+ 267 |         decoder.dateDecodingStrategy = .millisecondsSince1970
+ 268 |         decoder.nonConformingFloatDecodingStrategy = .throw
+ 269 |         decoder.userInfo = databaseDecodingUserInfo
+     |                            `- warning: type 'Any' does not conform to the 'Sendable' protocol
+ 270 |         return decoder
+ 271 |     }
+[60/170] Compiling GRDB TableRecord+Association.swift
+/Users/skilane/ios-dev/projects/grdb-fork-test/GRDB.swift/GRDB/Record/EncodableRecord.swift:243:28: warning: type 'Any' does not conform to the 'Sendable' protocol
+241 |         // guarantee some stability in order to ease record comparison
+242 |         encoder.outputFormatting = .sortedKeys
+243 |         encoder.userInfo = databaseEncodingUserInfo
+    |                            `- warning: type 'Any' does not conform to the 'Sendable' protocol
+244 |         return encoder
+245 |     }
+
+/Users/skilane/ios-dev/projects/grdb-fork-test/GRDB.swift/GRDB/Record/FetchableRecord.swift:269:28: warning: type 'Any' does not conform to the 'Sendable' protocol
+ 267 |         decoder.dateDecodingStrategy = .millisecondsSince1970
+ 268 |         decoder.nonConformingFloatDecodingStrategy = .throw
+ 269 |         decoder.userInfo = databaseDecodingUserInfo
+     |                            `- warning: type 'Any' does not conform to the 'Sendable' protocol
+ 270 |         return decoder
+ 271 |     }
+[61/170] Compiling GRDB TableRecord+QueryInterfaceRequest.swift
+/Users/skilane/ios-dev/projects/grdb-fork-test/GRDB.swift/GRDB/Record/EncodableRecord.swift:243:28: warning: type 'Any' does not conform to the 'Sendable' protocol
+241 |         // guarantee some stability in order to ease record comparison
+242 |         encoder.outputFormatting = .sortedKeys
+243 |         encoder.userInfo = databaseEncodingUserInfo
+    |                            `- warning: type 'Any' does not conform to the 'Sendable' protocol
+244 |         return encoder
+245 |     }
+
+/Users/skilane/ios-dev/projects/grdb-fork-test/GRDB.swift/GRDB/Record/FetchableRecord.swift:269:28: warning: type 'Any' does not conform to the 'Sendable' protocol
+ 267 |         decoder.dateDecodingStrategy = .millisecondsSince1970
+ 268 |         decoder.nonConformingFloatDecodingStrategy = .throw
+ 269 |         decoder.userInfo = databaseDecodingUserInfo
+     |                            `- warning: type 'Any' does not conform to the 'Sendable' protocol
+ 270 |         return decoder
+ 271 |     }
+[62/170] Compiling GRDB EncodableRecord+Encodable.swift
+/Users/skilane/ios-dev/projects/grdb-fork-test/GRDB.swift/GRDB/Record/EncodableRecord.swift:243:28: warning: type 'Any' does not conform to the 'Sendable' protocol
+241 |         // guarantee some stability in order to ease record comparison
+242 |         encoder.outputFormatting = .sortedKeys
+243 |         encoder.userInfo = databaseEncodingUserInfo
+    |                            `- warning: type 'Any' does not conform to the 'Sendable' protocol
+244 |         return encoder
+245 |     }
+
+/Users/skilane/ios-dev/projects/grdb-fork-test/GRDB.swift/GRDB/Record/FetchableRecord.swift:269:28: warning: type 'Any' does not conform to the 'Sendable' protocol
+ 267 |         decoder.dateDecodingStrategy = .millisecondsSince1970
+ 268 |         decoder.nonConformingFloatDecodingStrategy = .throw
+ 269 |         decoder.userInfo = databaseDecodingUserInfo
+     |                            `- warning: type 'Any' does not conform to the 'Sendable' protocol
+ 270 |         return decoder
+ 271 |     }
+[63/170] Compiling GRDB EncodableRecord.swift
+/Users/skilane/ios-dev/projects/grdb-fork-test/GRDB.swift/GRDB/Record/EncodableRecord.swift:243:28: warning: type 'Any' does not conform to the 'Sendable' protocol
+241 |         // guarantee some stability in order to ease record comparison
+242 |         encoder.outputFormatting = .sortedKeys
+243 |         encoder.userInfo = databaseEncodingUserInfo
+    |                            `- warning: type 'Any' does not conform to the 'Sendable' protocol
+244 |         return encoder
+245 |     }
+
+/Users/skilane/ios-dev/projects/grdb-fork-test/GRDB.swift/GRDB/Record/FetchableRecord.swift:269:28: warning: type 'Any' does not conform to the 'Sendable' protocol
+ 267 |         decoder.dateDecodingStrategy = .millisecondsSince1970
+ 268 |         decoder.nonConformingFloatDecodingStrategy = .throw
+ 269 |         decoder.userInfo = databaseDecodingUserInfo
+     |                            `- warning: type 'Any' does not conform to the 'Sendable' protocol
+ 270 |         return decoder
+ 271 |     }
+[64/170] Compiling GRDB FetchableRecord+Decodable.swift
+/Users/skilane/ios-dev/projects/grdb-fork-test/GRDB.swift/GRDB/Record/EncodableRecord.swift:243:28: warning: type 'Any' does not conform to the 'Sendable' protocol
+241 |         // guarantee some stability in order to ease record comparison
+242 |         encoder.outputFormatting = .sortedKeys
+243 |         encoder.userInfo = databaseEncodingUserInfo
+    |                            `- warning: type 'Any' does not conform to the 'Sendable' protocol
+244 |         return encoder
+245 |     }
+
+/Users/skilane/ios-dev/projects/grdb-fork-test/GRDB.swift/GRDB/Record/FetchableRecord.swift:269:28: warning: type 'Any' does not conform to the 'Sendable' protocol
+ 267 |         decoder.dateDecodingStrategy = .millisecondsSince1970
+ 268 |         decoder.nonConformingFloatDecodingStrategy = .throw
+ 269 |         decoder.userInfo = databaseDecodingUserInfo
+     |                            `- warning: type 'Any' does not conform to the 'Sendable' protocol
+ 270 |         return decoder
+ 271 |     }
+[65/170] Compiling GRDB FetchableRecord+TableRecord.swift
+/Users/skilane/ios-dev/projects/grdb-fork-test/GRDB.swift/GRDB/Record/EncodableRecord.swift:243:28: warning: type 'Any' does not conform to the 'Sendable' protocol
+241 |         // guarantee some stability in order to ease record comparison
+242 |         encoder.outputFormatting = .sortedKeys
+243 |         encoder.userInfo = databaseEncodingUserInfo
+    |                            `- warning: type 'Any' does not conform to the 'Sendable' protocol
+244 |         return encoder
+245 |     }
+
+/Users/skilane/ios-dev/projects/grdb-fork-test/GRDB.swift/GRDB/Record/FetchableRecord.swift:269:28: warning: type 'Any' does not conform to the 'Sendable' protocol
+ 267 |         decoder.dateDecodingStrategy = .millisecondsSince1970
+ 268 |         decoder.nonConformingFloatDecodingStrategy = .throw
+ 269 |         decoder.userInfo = databaseDecodingUserInfo
+     |                            `- warning: type 'Any' does not conform to the 'Sendable' protocol
+ 270 |         return decoder
+ 271 |     }
+[66/170] Compiling GRDB FetchableRecord.swift
+/Users/skilane/ios-dev/projects/grdb-fork-test/GRDB.swift/GRDB/Record/EncodableRecord.swift:243:28: warning: type 'Any' does not conform to the 'Sendable' protocol
+241 |         // guarantee some stability in order to ease record comparison
+242 |         encoder.outputFormatting = .sortedKeys
+243 |         encoder.userInfo = databaseEncodingUserInfo
+    |                            `- warning: type 'Any' does not conform to the 'Sendable' protocol
+244 |         return encoder
+245 |     }
+
+/Users/skilane/ios-dev/projects/grdb-fork-test/GRDB.swift/GRDB/Record/FetchableRecord.swift:269:28: warning: type 'Any' does not conform to the 'Sendable' protocol
+ 267 |         decoder.dateDecodingStrategy = .millisecondsSince1970
+ 268 |         decoder.nonConformingFloatDecodingStrategy = .throw
+ 269 |         decoder.userInfo = databaseDecodingUserInfo
+     |                            `- warning: type 'Any' does not conform to the 'Sendable' protocol
+ 270 |         return decoder
+ 271 |     }
+[67/170] Compiling GRDB MutablePersistableRecord+DAO.swift
+/Users/skilane/ios-dev/projects/grdb-fork-test/GRDB.swift/GRDB/Record/EncodableRecord.swift:243:28: warning: type 'Any' does not conform to the 'Sendable' protocol
+241 |         // guarantee some stability in order to ease record comparison
+242 |         encoder.outputFormatting = .sortedKeys
+243 |         encoder.userInfo = databaseEncodingUserInfo
+    |                            `- warning: type 'Any' does not conform to the 'Sendable' protocol
+244 |         return encoder
+245 |     }
+
+/Users/skilane/ios-dev/projects/grdb-fork-test/GRDB.swift/GRDB/Record/FetchableRecord.swift:269:28: warning: type 'Any' does not conform to the 'Sendable' protocol
+ 267 |         decoder.dateDecodingStrategy = .millisecondsSince1970
+ 268 |         decoder.nonConformingFloatDecodingStrategy = .throw
+ 269 |         decoder.userInfo = databaseDecodingUserInfo
+     |                            `- warning: type 'Any' does not conform to the 'Sendable' protocol
+ 270 |         return decoder
+ 271 |     }
+[68/170] Compiling GRDB MutablePersistableRecord+Delete.swift
+/Users/skilane/ios-dev/projects/grdb-fork-test/GRDB.swift/GRDB/Record/EncodableRecord.swift:243:28: warning: type 'Any' does not conform to the 'Sendable' protocol
+241 |         // guarantee some stability in order to ease record comparison
+242 |         encoder.outputFormatting = .sortedKeys
+243 |         encoder.userInfo = databaseEncodingUserInfo
+    |                            `- warning: type 'Any' does not conform to the 'Sendable' protocol
+244 |         return encoder
+245 |     }
+
+/Users/skilane/ios-dev/projects/grdb-fork-test/GRDB.swift/GRDB/Record/FetchableRecord.swift:269:28: warning: type 'Any' does not conform to the 'Sendable' protocol
+ 267 |         decoder.dateDecodingStrategy = .millisecondsSince1970
+ 268 |         decoder.nonConformingFloatDecodingStrategy = .throw
+ 269 |         decoder.userInfo = databaseDecodingUserInfo
+     |                            `- warning: type 'Any' does not conform to the 'Sendable' protocol
+ 270 |         return decoder
+ 271 |     }
+[69/170] Compiling GRDB MutablePersistableRecord+Insert.swift
+/Users/skilane/ios-dev/projects/grdb-fork-test/GRDB.swift/GRDB/Record/EncodableRecord.swift:243:28: warning: type 'Any' does not conform to the 'Sendable' protocol
+241 |         // guarantee some stability in order to ease record comparison
+242 |         encoder.outputFormatting = .sortedKeys
+243 |         encoder.userInfo = databaseEncodingUserInfo
+    |                            `- warning: type 'Any' does not conform to the 'Sendable' protocol
+244 |         return encoder
+245 |     }
+
+/Users/skilane/ios-dev/projects/grdb-fork-test/GRDB.swift/GRDB/Record/FetchableRecord.swift:269:28: warning: type 'Any' does not conform to the 'Sendable' protocol
+ 267 |         decoder.dateDecodingStrategy = .millisecondsSince1970
+ 268 |         decoder.nonConformingFloatDecodingStrategy = .throw
+ 269 |         decoder.userInfo = databaseDecodingUserInfo
+     |                            `- warning: type 'Any' does not conform to the 'Sendable' protocol
+ 270 |         return decoder
+ 271 |     }
+[70/170] Compiling GRDB MutablePersistableRecord+Save.swift
+/Users/skilane/ios-dev/projects/grdb-fork-test/GRDB.swift/GRDB/Record/EncodableRecord.swift:243:28: warning: type 'Any' does not conform to the 'Sendable' protocol
+241 |         // guarantee some stability in order to ease record comparison
+242 |         encoder.outputFormatting = .sortedKeys
+243 |         encoder.userInfo = databaseEncodingUserInfo
+    |                            `- warning: type 'Any' does not conform to the 'Sendable' protocol
+244 |         return encoder
+245 |     }
+
+/Users/skilane/ios-dev/projects/grdb-fork-test/GRDB.swift/GRDB/Record/FetchableRecord.swift:269:28: warning: type 'Any' does not conform to the 'Sendable' protocol
+ 267 |         decoder.dateDecodingStrategy = .millisecondsSince1970
+ 268 |         decoder.nonConformingFloatDecodingStrategy = .throw
+ 269 |         decoder.userInfo = databaseDecodingUserInfo
+     |                            `- warning: type 'Any' does not conform to the 'Sendable' protocol
+ 270 |         return decoder
+ 271 |     }
+[71/170] Compiling GRDB SQLOperators.swift
+[72/170] Compiling GRDB SQLOrdering.swift
+[73/170] Compiling GRDB SQLRelation.swift
+[74/170] Compiling GRDB SQLSelection.swift
+[75/170] Compiling GRDB SQLSubquery.swift
+[76/170] Compiling GRDB Table.swift
+[77/170] Compiling GRDB SQLColumnGenerator.swift
+[78/170] Compiling GRDB SQLGenerationContext.swift
+[79/170] Compiling GRDB SQLIndexGenerator.swift
+[80/170] Compiling GRDB SQLQueryGenerator.swift
+[81/170] Compiling GRDB SQLTableAlterationGenerator.swift
+[82/170] Compiling GRDB SQLTableGenerator.swift
+[83/170] Compiling GRDB TableAlias.swift
+[84/170] Compiling GRDB SQLInterpolation+QueryInterface.swift
+[85/170] Compiling GRDB ColumnDefinition.swift
+[86/170] Compiling GRDB Database+SchemaDefinition.swift
+[87/170] Compiling GRDB MutablePersistableRecord+Update.swift
+[88/170] Compiling GRDB MutablePersistableRecord+Upsert.swift
+[89/170] Compiling GRDB MutablePersistableRecord.swift
+[90/170] Compiling GRDB PersistableRecord+Insert.swift
+[91/170] Compiling GRDB PersistableRecord+Save.swift
+[92/170] Compiling GRDB PersistableRecord+Upsert.swift
+[93/170] Compiling GRDB PersistableRecord.swift
+[94/170] Compiling GRDB Record.swift
+[95/170] Compiling GRDB TableRecord.swift
+[96/170] Compiling GRDB CaseInsensitiveIdentifier.swift
+[97/170] Compiling GRDB Inflections+English.swift
+[98/170] Compiling GRDB Inflections.swift
+[99/170] Compiling GRDB Mutex.swift
+[100/170] Compiling GRDB OnDemandFuture.swift
+[101/170] Compiling GRDB OrderedDictionary.swift
+[102/170] Compiling GRDB Pool.swift
+[103/170] Compiling GRDB ReadWriteLock.swift
+[104/170] Compiling GRDB ReceiveValuesOn.swift
+[105/170] Compiling GRDB Refinable.swift
+[106/170] Compiling GRDB Utils.swift
+[107/170] Compiling GRDB DatabaseCancellable.swift
+[108/170] Compiling GRDB ValueConcurrentObserver.swift
+[109/170] Compiling GRDB ValueWriteOnlyObserver.swift
+[110/170] Compiling GRDB Fetch.swift
+[111/170] Compiling GRDB Map.swift
+[112/170] Compiling GRDB RemoveDuplicates.swift
+[113/170] Compiling GRDB Trace.swift
+[114/170] Compiling GRDB ValueReducer.swift
+[115/170] Compiling GRDB SharedValueObservation.swift
+[116/170] Compiling GRDB ValueObservation.swift
+[117/170] Compiling GRDB ValueObservationScheduler.swift
+[118/170] Compiling GRDB resource_bundle_accessor.swift
+[119/170] Compiling GRDB AssociationAggregate.swift
+[120/170] Compiling GRDB BelongsToAssociation.swift
+[121/170] Compiling GRDB HasManyAssociation.swift
+[122/170] Compiling GRDB HasManyThroughAssociation.swift
+[123/170] Compiling GRDB HasOneAssociation.swift
+[124/170] Compiling GRDB HasOneThroughAssociation.swift
+[125/170] Compiling GRDB JoinAssociation.swift
+[126/170] Compiling GRDB CommonTableExpression.swift
+[127/170] Compiling GRDB QueryInterfaceRequest.swift
+[128/170] Compiling GRDB RequestProtocols.swift
+[129/170] Compiling GRDB Column.swift
+[130/170] Compiling GRDB DatabasePromise.swift
+[131/170] Compiling GRDB SQLAssociation.swift
+[132/170] Compiling GRDB SQLCollection.swift
+[133/170] Compiling GRDB SQLExpression.swift
+[134/170] Compiling GRDB SQLForeignKeyRequest.swift
+[135/170] Compiling GRDB SQLFunctions.swift
+[136/170] Compiling GRDB Optional.swift
+[137/170] Compiling GRDB StandardLibrary.swift
+[138/170] Compiling GRDB TransactionClock.swift
+[139/170] Compiling GRDB TransactionObserver.swift
+[140/170] Compiling GRDB WALSnapshot.swift
+[141/170] Compiling GRDB WALSnapshotTransaction.swift
+[142/170] Compiling GRDB Database+Dump.swift
+[143/170] Compiling GRDB DatabaseReader+dump.swift
+[144/170] Compiling GRDB DumpFormat.swift
+[145/170] Compiling GRDB DebugDumpFormat.swift
+[146/170] Compiling GRDB JSONDumpFormat.swift
+[147/170] Compiling GRDB LineDumpFormat.swift
+[148/170] Compiling GRDB ListDumpFormat.swift
+[149/170] Compiling GRDB QuoteDumpFormat.swift
+[150/170] Compiling GRDB FTS3.swift
+[151/170] Compiling GRDB FTS3Pattern.swift
+[152/170] Compiling GRDB FTS3TokenizerDescriptor.swift
+[153/170] Compiling GRDB Configuration.swift
+[154/170] Compiling GRDB Cursor.swift
+[155/170] Compiling GRDB Database+Schema.swift
+[156/170] Compiling GRDB Database+Statements.swift
+[157/170] Compiling GRDB Database.swift
+[158/170] Compiling GRDB DatabaseBackupProgress.swift
+[159/170] Compiling GRDB DatabaseCollation.swift
+[160/170] Compiling GRDB DatabaseError.swift
+[161/170] Compiling GRDB DatabaseFunction.swift
+[162/170] Compiling GRDB DatabasePool.swift
+[163/170] Compiling GRDB DatabasePublishers.swift
+[164/170] Compiling GRDB DatabaseQueue.swift
+[165/170] Compiling GRDB DatabaseReader.swift
+[166/170] Compiling GRDB DatabaseRegion.swift
+[167/170] Compiling GRDB DatabaseRegionObservation.swift
+[168/170] Compiling GRDB DatabaseSchemaCache.swift
+[169/170] Compiling GRDB DatabaseSnapshot.swift
+[169/171] Write Objects.LinkFileList
+[170/171] Linking libGRDB-dynamic.dylib
+Build complete! (4.60s)
