@@ -1,7 +1,8 @@
-module GRDBSQLite {
-  header "sqlite-vec.h"
+module GRDBSQLite [system] {
   header "sqlite3.h"
   header "sqlite3ext.h"
+  header "sqlite-vec.h"
+  header "shim.h"
   link "GRDBSQLite"
   export *
 }
