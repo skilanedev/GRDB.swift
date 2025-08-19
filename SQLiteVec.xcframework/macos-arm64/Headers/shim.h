@@ -1,5 +1,9 @@
 #include <sqlite3.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef void(*_errorLogCallback)(void *pArg, int iErrCode, const char *zMsg);
 
 extern void _registerErrorLogCallback(_errorLogCallback callback);
@@ -34,3 +38,7 @@ SQLITE_API int sqlite3_preupdate_count(sqlite3 *);
 SQLITE_API int sqlite3_preupdate_depth(sqlite3 *);
 SQLITE_API int sqlite3_preupdate_new(sqlite3 *, int, sqlite3_value **);
 #endif /* GRDB_SQLITE_ENABLE_PREUPDATE_HOOK */
+
+#ifdef __cplusplus
+}
+#endif
