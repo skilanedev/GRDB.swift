@@ -20,6 +20,9 @@ extern void _enableDoubleQuotedStringLiterals(sqlite3 *db);
 extern int sqlite3_vec_init(sqlite3 *db, char **pzErrMsg, const sqlite3_api_routines *pApi);
 
 extern int sqlite3_vec_init(sqlite3 *db, char **pzErrMsg, const sqlite3_api_routines *pApi);
+
+extern int sqlite3_vec_init(sqlite3 *db, char **pzErrMsg, const void *pApi);
+
 extern void sqlite3_free(void *p);
 #endif
 
