@@ -1,7 +1,7 @@
 import GRDBSQLite
 
-struct VecRegistration {
-    static let once: Void = {
+public struct VecRegistration {
+    private static let once: Void = {
         var pErrMsg: UnsafeMutablePointer<CChar>? = nil
         let rc = sqlite3_vec_init(nil, &pErrMsg, nil)
         if rc != 0 {
@@ -13,7 +13,7 @@ struct VecRegistration {
         }
     }()
     
-    static func register() {
+    public static func register() {
         _ = once
     }
 }
