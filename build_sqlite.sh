@@ -1,6 +1,5 @@
-# build_sqlite.sh
-
 #!/bin/bash
+
 set -e # Exit on error
 # Constants
 FRAMEWORK_NAME="SQLiteVec"  # Keep this to match Package.swift path
@@ -39,6 +38,7 @@ clang \
   -target arm64-apple-macos11.0 \
   -I"${OUTPUT_DIR}/headers" \
   ${CFLAGS} \
+  -DSQLITE_CORE=1 \
   -c "${OUTPUT_DIR}/src/vec.c" -o "${OUTPUT_DIR}/lib/macos-arm64/vec.o"
 clang \
   -arch arm64 \
